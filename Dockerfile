@@ -4,7 +4,7 @@ MAINTAINER Siddharth Bakshi
 RUN yum -y install epel-release
 RUN yum -y install sysbench
 RUN yum -y clean all
-# RUN chmod -R 777 /root/
+RUN chmod -R 777 /
 # RUN chmod -R 777 /var/
 # RUN chmod -R 777 /home/
 # RUN chmod -R 777 /etc/
@@ -31,4 +31,4 @@ RUN yum -y clean all
 # ENV boinckey 0306042ebf9cb4311fef19de74b91a2e
 
 
-# CMD python set_resource_limits.py && boinc --attach_project ${boincurl} ${boinckey} --allow_multiple_clients
+CMD python set_resource_limits.py && boinc --attach_project ${boincurl} ${boinckey} --allow_multiple_clients
