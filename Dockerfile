@@ -2,7 +2,7 @@ FROM centos:7
 MAINTAINER Siddharth Bakshi
 
 RUN yum -y install epel-release
-RUN yum install sysbench
+RUN yum -y install sysbench
 RUN yum -y clean all
 # RUN chmod -R 777 /root/
 # RUN chmod -R 777 /var/
